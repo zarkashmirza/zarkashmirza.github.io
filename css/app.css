@@ -2,7 +2,8 @@
 /*========== ROOT ==========*/
 :root {
   --bg-primary: #1c1e2a;
-  --bg-button: #c4ccef;
+  --accent: #c4ccef;
+  --hover: #bb4c30;
   --text-heading: #c4ccef;
   --text-body: #9ca3c1;
   --text-hl: #ee9f8b;
@@ -13,10 +14,17 @@
 
 /*=================================*/
 /*========== FONT-STYLES ==========*/
+.links_text {
+  font-family: var(--font-headings);
+  font-weight: 400;
+  color: var(--font-primary);
+  font-size: 2.3em;
+}
 .heading_text {
   font-family: var(--font-headings);
   font-weight: 400;
   color: var(--text-heading);
+  font-size: 1.9em;
 }
 .body_text {
   font-family: var(--font-primary);
@@ -47,6 +55,63 @@ body {
 /*==================================*/
 /*========== HEADER & NAV ==========*/
 header {}
+  #logo{
+    z-index: 897;
+    position: fixed;
+  }
+    #logo > a > img {
+      width: 128px;
+    }
+    #logo > h3 {
+      text-decoration: none;
+    }
+  #menu {
+    z-index: 899;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    height: 450px;
+    width: 300px;
+    text-align: right;
+    background: var(--bg-primary);
+    border: 3px solid var(--accent);
+    border-radius: 20px;
+  }
+    .social_links {}
+    .hamburger {
+      z-index: 999;
+      cursor: pointer;
+      display: inline-block;
+      margin-right: 13px;
+      transition: transform .3s ease;
+    }
+      .hamburger:hover {
+        transform: translateX(-13px);
+      }
+      .hamburger:hover .bars {
+        background: var(--text-hl);
+      }
+      .bars {
+        margin: 4px;
+        height: 9px;
+        width: 56px;
+        background: var(--accent);
+        border-radius: 4px;
+        transition: background .2s ease;
+      }
+    .nav_links {
+      margin: 8px;
+      padding: 44px 13px;
+    }
+    .nav_links > a {
+      display: inline-block;
+      text-decoration: none;
+      margin-top: 15px;
+      transition: color .2s ease;
+    }
+      .nav_links > a:hover {
+        color: var(--text-hl);
+      }
 
 /*===============================*/
 /*========== CSS GRID ===========*/
