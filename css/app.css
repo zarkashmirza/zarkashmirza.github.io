@@ -4,3 +4,38 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+
+/*==========================*/
+/*========== ROOT ==========*/
+:root {
+  --bg-primary: #1c1e2a;
+  --bg-button: #c4ccef;
+  --text-heading: #c4ccef;
+  --text-body: #9ca3c1;
+  --text-hl: #ee9f8b;
+  --font-headings: 'Aldritch', sans-serif;
+  --font-primary: 'Cantarell', sans-serif;
+  --font-code: 'Roboto Mono', monospace;
+}
+
+/*=================================*/
+/*========== FONT-STYLES ==========*/
+
+.heading_text {
+  font-family: var(--font-headings);
+  font-weight: 400;
+  color: var(--text-heading);
+}
+.body_text {
+  font-family: var(--font-primary);
+  font-weight: 400;
+  color: var(--text-body);
+}
+.code_block_font {
+  font-family: var(--font-code);
+  font-weight: 400;
+  color: var(--text-body);
+}
+.text_hl {
+  color: var(--text-hl);
+}
