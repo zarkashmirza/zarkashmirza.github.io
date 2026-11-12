@@ -17,24 +17,26 @@
 .links_text {
   font-family: var(--font-headings);
   font-weight: 400;
-  color: var(--font-primary);
+  color: var(--text-heading);
   font-size: 2.3em;
 }
 .heading_text {
   font-family: var(--font-headings);
-  font-weight: 400;
+  font-weight: 700;
   color: var(--text-heading);
-  font-size: 1.9em;
+  font-size: 2em;
 }
 .body_text {
   font-family: var(--font-primary);
   font-weight: 400;
   color: var(--text-body);
+  font-size: 1.4em;
 }
 .code_block_font {
   font-family: var(--font-code);
   font-weight: 400;
   color: var(--text-body);
+  font-size: 1.3em;
 }
 .text_hl {
   color: var(--text-hl);
@@ -54,7 +56,10 @@ body {
 
 /*==================================*/
 /*========== HEADER & NAV ==========*/
-header {}
+header {
+  height: 800px;
+  width: 100%;
+}
   #logo{
     z-index: 897;
     position: fixed;
@@ -152,13 +157,104 @@ header {}
 /* menu open height: 450px;*/
 /*===============================*/
 /*========== CSS GRID ===========*/
-#grid {}
-#about {}
-#toolbox {}
-#snapshots {}
-#design {}
-#contact {}
-footer {}
+#grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(300px, auto);
+  grid-template-areas:
+    "abt abt abt abt abt abt abt abt abt abt abt abt"
+    "box box box box box box box box box box box box"
+    "sns sns sns sns sns sns sns sns sns sns sns sns"
+    "des des des des des des des des des des des des"
+    "con con con con con con con con con con con con"
+    "ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr ftr";
+}
+  #grid h1 {
+    color: var(--text-heading);
+  }
+#about {
+  display: grid;
+  grid-area: abt;
+  height: auto;
+  width: 100%;
+  padding: 0 5%;
+}
+  #about > h1 {
+    padding-top: 21px;
+  }
+  .about_content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .about_image_container > img {
+    margin: 10% 0;
+    width: 640px;
+    border-radius: 16px;
+    border: 3px solid var(--accent);
+  }
+  .about_text_container {
+    line-height: 1.6;
+  }
+    .about_text_container h1 {
+      color: var(--text-heading);
+    }
+    .about_text_container p {
+      color: var(--text-body);
+      margin: 21px 0;
+    }
+#toolbox {
+  display: grid;
+  grid-area: box;
+  width: 100%;
+  height: 700px;
+}
+#snapshots {
+  display: grid;
+  grid-area: sns;
+  width: 100%;
+  height: 700px;
+}
+#design {
+  display: grid;
+  grid-area: des;
+  width: 100%;
+  height: 700px;
+}
+#contact {
+  display: grid;
+  grid-area: con;
+  width: 100%;
+  height: 700px;
+}
+footer {
+  display: grid;
+  grid-area: ftr;
+  width: 100%;
+  height: 150px;
+}
 
 /*=======================================*/
 /*========== COMPONENT STYLES ===========*/
+hr {
+  border: none;
+  background: none;
+}
+hr.section_divider {
+  height: 2px;
+  background-color: var(--accent);
+  margin: 50px 0;
+  width: 100%;
+}
+.heading_wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.heading_line {
+  flex-grow: .2;
+  height: 2px;
+  background: var(--text-body);
+}
