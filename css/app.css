@@ -59,9 +59,6 @@ header {}
     z-index: 897;
     position: fixed;
   }
-    #logo > a > img {
-      width: 128px;
-    }
     #logo > h3 {
       text-decoration: none;
     }
@@ -70,23 +67,60 @@ header {}
     position: fixed;
     top: 20px;
     right: 20px;
-    height: 450px;
+    height: 90px;
     width: 300px;
     text-align: right;
     background: var(--bg-primary);
     border: 3px solid var(--accent);
     border-radius: 20px;
+    transition: height .3s ease;
   }
-    .social_links {}
+  #menu.menu_open {
+    height: 450px;
+  }
+  #menu.menu_open .nav_links {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .15s;
+  }
+  #menu.menu_open .hamburger .bars:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+  }
+  #menu.menu_open .hamburger .bars:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+  }
+  #menu.menu_open .hamburger .bars:nth-child(2) {
+    opacity: 0;
+    transform: scale(0);
+  }
+    .menu_links_beside {
+      display: flex;
+      align-items: center;
+      justify-items: flex-end;
+    }
+      .social_links {
+        margin: 9px 5px;
+        margin-right: 10%;
+        padding: 13px;
+      }
+      .social_links > a > i {
+        font-size: 2.4em;
+        color: var(--accent);
+        margin: 0 9px;
+        transition: color .2s ease;
+      }
+        .social_links > a > i:hover {
+          color: var(--text-hl);
+        }
     .hamburger {
       z-index: 999;
       cursor: pointer;
-      display: inline-block;
+      margin-left: 23px;
       margin-right: 13px;
       transition: transform .3s ease;
     }
       .hamburger:hover {
-        transform: translateX(-13px);
+        transform: translateX(-5px);
       }
       .hamburger:hover .bars {
         background: var(--text-hl);
@@ -100,6 +134,8 @@ header {}
         transition: background .2s ease;
       }
     .nav_links {
+      visibility: hidden;
+      opacity: 1;
       margin: 8px;
       padding: 44px 13px;
     }
@@ -107,12 +143,13 @@ header {}
       display: inline-block;
       text-decoration: none;
       margin-top: 15px;
-      transition: color .2s ease;
+      transition: color .2s ease, transform .3s ease;
     }
       .nav_links > a:hover {
         color: var(--text-hl);
+        transform: translateX(-5px);
       }
-
+/* menu open height: 450px;*/
 /*===============================*/
 /*========== CSS GRID ===========*/
 #grid {}
