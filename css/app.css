@@ -14,6 +14,12 @@
 
 /*=================================*/
 /*========== FONT-STYLES ==========*/
+.logo_text {
+  font-family: var(--font-headings);
+  font-weight: 700;
+  color: var(--bg-primary);
+  font-size: 2em;
+}
 .links_text {
   font-family: var(--font-headings);
   font-weight: 400;
@@ -53,6 +59,16 @@
 body {
   background: var(--bg-primary);
 }
+.top_left_buttons {
+  z-index: 897;
+  position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 25px;
+  align-items: start;
+  margin: 21px;
+  padding: 21px;
+}
 
 /*==================================*/
 /*========== HEADER & NAV ==========*/
@@ -60,12 +76,23 @@ header {
   height: 80vh;
   width: 100%;
 }
-  #logo{
-    z-index: 897;
-    position: fixed;
+  .logo{
+    background: var(--text-body);
+    text-decoration: none;
+    padding: 21px;
+    border: 2px solid var(--accent);
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    transition: color .2s ease, border .2s ease, transform .3s ease;
   }
-    #logo > h3 {
+    .logo a {
       text-decoration: none;
+    }
+    .logo:hover {
+      background: var(--text-hl);
+      border: 2px solid var(--hover);
+      transform: translateY(-5px);
     }
   #menu {
     z-index: 899;
@@ -154,7 +181,6 @@ header {
         color: var(--text-hl);
         transform: translateX(-5px);
       }
-/* menu open height: 450px;*/
 /*===============================*/
 /*========== CSS GRID ===========*/
 #grid {
@@ -328,3 +354,30 @@ hr.dashed_divider {
   .lang_container:hover {
     border: 2px solid var(--hover);
   }
+.resume_button {
+  text-align: left;
+  margin-top: 11px;
+  padding: 13px;
+  border: 2px solid var(--accent);
+  border-radius: 36px;
+  cursor: pointer;
+  width: 85%;
+  background: var(--accent);
+}
+  .resume_button_top {
+    position: absolute;
+    top: 29px;
+    left: 145px;
+    padding: 13px;
+    border: 2px solid var(--accent);
+    border-radius: 36px;
+    background: #222;
+    text-align: center;
+    cursor: pointer;
+    transition: background .2s ease, border .2s ease, transform .3s ease;
+  }
+    .resume_button_top:hover {
+      transform: 
+        translateX(-6px)
+        translateY(3px);
+    }
