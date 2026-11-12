@@ -156,7 +156,7 @@ body {
       width: 56px;
       background: var(--accent);
       border-radius: 4px;
-      transition: background .2s ease;
+      transition: background .2s ease, opacity .2s ease, transform .3s ease-in-out;
     }
   .nav_links {
     visibility: hidden;
@@ -180,6 +180,9 @@ body {
 header {
   height: 80vh;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  align-items: start;
 }
   
 /*===============================*/
