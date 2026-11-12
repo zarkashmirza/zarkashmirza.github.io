@@ -194,7 +194,12 @@ header {
     width: 640px;
     border-radius: 16px;
     border: 3px solid var(--accent);
+    transition: transform .3s ease-in-out, border .2s ease;
   }
+    .about_image_container > img:hover {
+      border: 3px solid var(--hover);
+      transform: translateY(-15px);
+    }
   .about_text_container {
     line-height: 1.6;
   }
