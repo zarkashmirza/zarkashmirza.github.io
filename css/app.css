@@ -21,7 +21,7 @@
   font-size: 2em;
 }
 .links_text {
-  font-family: var(--font-headings);
+  font-family: var(--font-code);
   font-weight: 400;
   color: var(--text-heading);
   font-size: 2.3em;
@@ -161,13 +161,13 @@ body {
   .nav_links {
     visibility: hidden;
     opacity: 1;
-    margin: 8px;
-    padding: 44px 13px;
+    margin: 4px 8px;
+    padding: 20px 13px;
   }
   .nav_links > a {
     display: inline-block;
     text-decoration: none;
-    margin-top: 15px;
+    margin-top: 9px;
     transition: color .2s ease, transform .3s ease;
   }
     .nav_links > a:hover {
