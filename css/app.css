@@ -66,7 +66,7 @@ body {
 .logo{
   background: var(--text-body);
   text-decoration: none;
-  padding: 21px;
+  padding: 19px;
   border: 2px solid var(--accent);
   border-radius: 20px;
   cursor: pointer;
@@ -76,10 +76,15 @@ body {
   .logo a {
     text-decoration: none;
   }
+    .logo > a > h3 {
+      font-family: 'Aldrich';
+      font-size: 1.3em;
+      color: #fff;
+    }
   .logo:hover {
     background: var(--text-hl);
     border: 2px solid var(--hover);
-    transform: translateY(-5px);
+    transform: translateY(-7px);
   }
 #menu {
   z-index: 899;
