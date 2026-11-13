@@ -172,7 +172,59 @@
         <h1 class="body_text">Contact</h1>
         <div class="heading_line"></div>
       </div>
-      <h1 class="heading_text">Let's Connect</h1>
+      <h1 class="heading_text">Get In Touch</h1>
+      <div class="contact_grid_container">
+        <div class="contact_info_block">
+          <h2 class="section_heading heading_text">Let's Build Something</h2>
+          <p class="body_text">
+            Whether you have a project in mind, want to talk shop about architecture, or just want to connect—drop a message below.
+          </p>
+          <div class="contact_meta">
+            <p class="meta_item">Based in Ontario, Canada</p>
+            <p class="meta_item">Open to collaborations &amp; opportunities</p>
+          </div>
+        </div>
+        <div class="contact_form_wrapper">
+          <form class="contact_form" onsubmit="return false;">
+            <div class="form_group">
+              <label for="senderName" class="form_label">Name</label>
+              <input
+                type="text" 
+                id="senderName" 
+                name="name" 
+                class="form_input" 
+                placeholder="John Doe" 
+                required
+              >
+            </div>
+            <div class="form_group">
+              <label for="senderEmail" class="form_label">Email</label>
+              <input 
+                type="email" 
+                id="senderEmail" 
+                name="email" 
+                class="form_input" 
+                placeholder="john@example.com" 
+                required
+              >
+            </div>
+            <div class="form_group">
+              <label for="senderMessage" class="form_label">Message</label>
+              <textarea 
+                id="senderMessage" 
+                name="message" 
+                class="form_textarea" 
+                rows="5" 
+                placeholder="Tell me about your project or idea..." 
+                required
+              ></textarea>
+            </div>
+            <button type="submit" id="submitContactBtn" class="btn_submit code_block_font">
+              Send Transmission
+            </button>
+          </form>
+        </div>
+      </div>
     </section>
     <footer class="body_text">&copy;2026, Zarkash Mirza</footer>
   </div>
