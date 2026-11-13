@@ -407,6 +407,51 @@ header {
       border-top-left-radius: 16px;
       border-top-right-radius: 16px;
     }
+  .vector_card_wrapper {
+    background: rgba(0, 0, 13, 0.7);
+    max-width: 320px;
+    border-radius: 16px;
+    border: 3px solid var(--accent);
+    display: inline-block;
+    vertical-align: top;
+    margin: 5%;
+    transition: transform .3s ease, border .2s ease, background .2s ease;
+  }
+    .vector_card_wrapper:hover {
+      transform: translateY(-7px);
+      border: 3px solid var(--hover);
+    }
+    .vector_card {
+      width: fit-content;
+      height: 300px;
+      padding: 2%;
+      background: rgba(0, 0, 13, 0.7);
+      border-radius: 16px;
+    }
+      .vector_card > img {
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 16px;
+        border-top-right-radius: 16px;
+      }
+    .vector_link_button {
+      background: var(--bg-primary);
+      border: 2px solid var(--accent);
+      border-radius: 32px;
+      padding: 13px;
+      justify-self: center;
+      cursor: pointer;
+      transition: background .2s ease, border .2s ease, color .2s ease, transform .2s ease;
+    }
+      .vector_link_button:hover {
+        background: rgba(0, 0, 13, 0.7);
+        border: 2px solid var(--hover);
+        color: var(--bg-primary);
+        transform: translateY(3px);
+      }
+      .vector_link_button > a {
+        text-decoration: none;
+      }
 #contact {
   grid-area: con;
   width: 100%;
