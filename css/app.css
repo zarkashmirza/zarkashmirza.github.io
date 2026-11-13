@@ -510,4 +510,21 @@ hr.dashed_divider {
 
 /*====================================*/
 /*========== MEDIA QUERIES ===========*/
-/* This is where media queries will live */
+
+@media (max-width: 768px) {
+  header {
+    
+  }
+  .about_content {
+    grid-template-columns: 1fr;
+  }
+  .toolbox {}
+  .snapshots {}
+  .design {}
+  .contact_content {
+    grid-template-columns: 1fr;
+  }
+  .languages, .frameworks, .prototyping {
+    grid-template-columns: 1fr;
+  }
+}
