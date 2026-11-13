@@ -14,12 +14,6 @@
 
 /*=================================*/
 /*========== FONT-STYLES ==========*/
-.logo_text {
-  font-family: var(--font-headings);
-  font-weight: 700;
-  color: var(--bg-primary);
-  font-size: 2em;
-}
 .links_text {
   font-family: var(--font-code);
   font-weight: 400;
@@ -167,7 +161,7 @@ body {
   .nav_links > a {
     display: inline-block;
     text-decoration: none;
-    margin-top: 9px;
+    margin-top: 25px;
     transition: color .2s ease, transform .3s ease;
   }
     .nav_links > a:hover {
