@@ -349,8 +349,7 @@ header {
     }
     .snapshot_highlights_text > ul {
       aspect-ratio: 6/4;
-    }
-    
+    }    
 #design {
   display: grid;
   grid-area: des;
@@ -359,6 +358,55 @@ header {
   padding: 0 5%;
   border-top: 2px solid var(--accent);
 }
+  #design > h1 {
+    margin: 21px 0;
+  }
+  .design_showcase_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 450px), 1fr));
+    gap: 25px;
+    padding: 3% 0 5% 0;
+    text-align: center;
+  }
+  .design_card {
+    background: rgba(28, 30, 42, 0.6);
+    border: 2px solid var(--accent);
+    border-radius: 16px;
+    padding: 30px;
+    transition: border .2s ease, transform .3s ease;
+  }
+    .design_card > p {
+      font-size: 1.1em;
+      margin: 15px 0;
+    }
+    .design_card:hover {
+      border: 2px solid var(--hover);
+      transform: translateY(-7px);
+    }
+  .inner_card_wrapper {
+    background: rgba(0, 0, 13, 0.7);
+    width: 300px;
+    aspect-ratio: 6/6;
+    border-radius: 16px;
+    border: 3px solid var(--accent);
+    background: var(--text-body);
+    display: inline-block;
+    vertical-align: top;
+    margin: 5%;
+    transition: transform .3s ease, border .2s ease, background .2s ease;
+  }
+    .inner_card_wrapper:hover {
+      transform: translateY(-7px);
+      border: 3px solid var(--hover);
+      background: var(--text-hl);
+    }
+    .inner_card > img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+    }
 #contact {
   grid-area: con;
   width: 100%;
