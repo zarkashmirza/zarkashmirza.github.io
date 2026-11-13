@@ -583,20 +583,24 @@ hr.dashed_divider {
 /*====================================*/
 /*========== MEDIA QUERIES ===========*/
 
-@media (max-width: 768px) {
-  header {
-
-  }
-  .about_content {
+@media (max-width: 900px) {
+  .about_content,
+  .contact_grid_container {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
-  .toolbox {}
-  .snapshots {}
-  .design {}
-  .contact_content {
+    .about_image_container > img {
+      width: 100%;
+    }
+  .snapshots_container {
     grid-template-columns: 1fr;
+    padding: 10px;
   }
-  .languages, .frameworks, .prototyping {
-    grid-template-columns: 1fr;
-  }
+    .snapshot_wrapper {
+      width: 100%;
+      margin: 10px 0;
+    }
+    .snapshot_heading_text {
+      width: 100%;
+    }
 }
